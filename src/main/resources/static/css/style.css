@@ -1,0 +1,28 @@
+.comment-input{
+
+    resize: both;
+
+}
+
+.feed{
+
+    display: grid;
+    place-items: center;
+
+}
+
+#sparta-text{
+
+    text-align: center;
+    font-size: 500%;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+

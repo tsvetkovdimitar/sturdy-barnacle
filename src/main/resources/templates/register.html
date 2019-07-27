@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <th:block th:include="~{fragments/navbar}"></th:block>
+</header>
+<div class="feed container-fluid align-items-center mt-5 mr-auto ml-auto">
+    <div class="jumbotron col-xl-8 col-md-8 align-bottom align-self-center bg-light">
+        <form id="register-form" class="form-horizontal align-items-center align-self-center align-content-center" name="registerForm" th:method="post" th:action="@{users/register}">
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="email">Email:</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="pwd">Password:</label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
+</body>
+</html>
