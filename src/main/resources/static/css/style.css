@@ -18,6 +18,15 @@
 
 }
 
+#register-form, #login-form{
+
+    display:inline-block;
+}
+
+.center {
+    text-align:center;
+}
+
 footer {
     position: fixed;
     bottom: 0;

@@ -16,4 +16,11 @@ public class UserController extends BaseController{
 
         return super.view("register");
     }
+
+    @GetMapping("/login")
+    @PreAuthorize("isAnonymous()")
+    public ModelAndView login(){
+
+        return super.view("login");
+    }
 }
