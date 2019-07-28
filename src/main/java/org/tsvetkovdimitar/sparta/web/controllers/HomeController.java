@@ -16,4 +16,12 @@ public class HomeController extends BaseController {
 
     }
 
+    @GetMapping("/home")
+    @PreAuthorize("isAuthenticated()")
+    public ModelAndView home(){
+
+        return super.view("home");
+
+    }
+
 }

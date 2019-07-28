@@ -9,8 +9,8 @@ import java.util.Set;
 @Table(name = "users")
 public class User extends BaseEntity implements UserDetails {
 
-        private String first_name;
-        private String last_name;
+        private String firstName;
+        private String lastName;
         private String email;
         private String password;
 
@@ -21,21 +21,21 @@ public class User extends BaseEntity implements UserDetails {
     }
 
     @Column(name = "first_name", nullable = false)
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     @Column(name = "last_name", nullable = false)
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
