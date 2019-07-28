@@ -8,10 +8,12 @@ import org.tsvetkovdimitar.sparta.domain.models.service.RoleServiceModel;
 import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;
 import org.tsvetkovdimitar.sparta.repository.RoleRepository;
 
+import javax.transaction.Transactional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class RoleServiceImpl implements RoleService{
 
     private final RoleRepository roleRepository;

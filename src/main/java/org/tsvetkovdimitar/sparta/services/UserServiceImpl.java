@@ -11,9 +11,11 @@ import org.tsvetkovdimitar.sparta.domain.models.service.RoleServiceModel;
 import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;
 import org.tsvetkovdimitar.sparta.repository.UserRepository;
 
+import javax.transaction.Transactional;
 import java.util.LinkedHashSet;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

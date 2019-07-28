@@ -27,14 +27,14 @@ public class UserController extends BaseController{
     }
 
     @GetMapping("/register")
-    @PreAuthorize("isAnonymous()")
+//    @PreAuthorize("isAnonymous()")
     public ModelAndView register(){
 
         return super.view("register");
     }
 
     @PostMapping("/register")
-    @PreAuthorize("isAnonymous()")
+//    @PreAuthorize("isAnonymous()")
     public ModelAndView registerConfirm(@ModelAttribute UserRegisterBindingModel userRegisterBindingModel){
 
 //        if(!userRegisterBindingModel.getPassword().equals(userRegisterBindingModel.getConfirmPassword())){
@@ -45,12 +45,12 @@ public class UserController extends BaseController{
 
         this.userService.registerUser(this.modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
 
-        return super.redirect("login");
+        return super.redirect("test");
 
     }
 
     @GetMapping("login")
-    @PreAuthorize("isAnonymous()")
+//    @PreAuthorize("isAnonymous()")
     public ModelAndView login(){
 
         return super.view("login");
