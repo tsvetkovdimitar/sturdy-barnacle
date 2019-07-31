@@ -10,7 +10,7 @@
     <th:block th:include="~{fragments/navbar}"></th:block>
 </header>
     <div class="feed container-fluid align-items-center mt-5 mr-auto ml-auto">
-        <form th:action="@{/posts/submit}"  method="post">
+        <form th:action="@{/posts/submit}"  th:method="post">
             <div class="form-group mt-3">
                 <label for="inputPost">Post:</label>
                 <textarea class="comment-input form-control" type="text" rows="3" id="inputPost"></textarea>

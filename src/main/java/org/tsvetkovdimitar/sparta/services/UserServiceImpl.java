@@ -15,7 +15,6 @@ import javax.transaction.Transactional;
 import java.util.LinkedHashSet;
 
 @Service
-@Transactional
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

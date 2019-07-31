@@ -45,7 +45,7 @@ public class User extends BaseEntity implements UserDetails {
     }
 
     @Override
-    @Column(name = "email", nullable = false, unique = true, updatable = false)
+    @Column(name = "email", nullable = false, unique = true)
     public String getUsername() {
 
         return email;

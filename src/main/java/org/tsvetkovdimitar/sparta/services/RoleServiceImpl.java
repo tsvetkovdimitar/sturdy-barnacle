@@ -13,7 +13,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-@Transactional
 public class RoleServiceImpl implements RoleService{
 
     private final RoleRepository roleRepository;
@@ -30,11 +29,11 @@ public class RoleServiceImpl implements RoleService{
 
         if(this.roleRepository.count() == 0){
 
-            this.roleRepository.saveAndFlush(new Role("ROLE_USER"));
             this.roleRepository.saveAndFlush(new Role("ROLE_ADMIN"));
 
         }
 
+            this.roleRepository.saveAndFlush(new Role("ROLE_USER"));
     }
 
 //    @Override

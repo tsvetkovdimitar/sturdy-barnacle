@@ -19,8 +19,8 @@
     </th:block>
     <th:block sec:authorize="isAuthenticated()">
         <nav class="navbar pr-4 container-fluid navbar-expand-md position-sticky navbar-light bg-light">
-            <a class="navbar-brand" th:href="@{/}">Sparta</a>
-            <button class="navbar-toggler navbar-toggle" data-toggle="collapse" data-target="#collapse_target">
+            <a class="navbar-brand" th:href="@{/home}">Sparta</a>
+            <button class="navbar-toggler navbar-toggle" data-toggle="collapse" data-target="#users_collapse_target">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="users_collapse_target">
@@ -31,21 +31,18 @@
                     <li class="nav-item active">
                         <a class="nav-link" th:href="@{/users/profile}">Profile</a>
                     </li>
-
                     <li class="nav-item active">
                         <div class="dropdown show">
                             <a class="nav-link active dropdown-toggle" href="#" role="button" id="moderatorDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Moderator
                             </a>
                             <div class="dropdown-menu" aria-labelledby="moderatorDropdown">
-                                <a class="dropdown-item" th:href="@{/products/add)">Add Product</a>
+                                <a class="dropdown-item" th:href="@{/posts/submit)">Add Product</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" th:href="@{/products/all}">All Products</a>
+                                <a class="dropdown-item" th:href="@{/posts/all}">All Products</a>
                             </div>
                         </div>
                     </li>
-
-
                     <li class="nav-item active">
                         <div class="dropdown">
                             <a class="nav-link active dropdown-toggle" href="#" role="button" id="adminDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
