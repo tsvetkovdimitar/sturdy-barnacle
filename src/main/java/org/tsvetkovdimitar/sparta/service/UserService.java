@@ -1,4 +1,4 @@
-package org.tsvetkovdimitar.sparta.services;
+package org.tsvetkovdimitar.sparta.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;

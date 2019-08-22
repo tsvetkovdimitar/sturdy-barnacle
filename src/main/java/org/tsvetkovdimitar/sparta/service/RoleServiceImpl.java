@@ -1,14 +1,12 @@
-package org.tsvetkovdimitar.sparta.services;
+package org.tsvetkovdimitar.sparta.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tsvetkovdimitar.sparta.domain.entities.Role;
 import org.tsvetkovdimitar.sparta.domain.models.service.RoleServiceModel;
-import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;
 import org.tsvetkovdimitar.sparta.repository.RoleRepository;
 
-import javax.transaction.Transactional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -29,11 +27,15 @@ public class RoleServiceImpl implements RoleService{
 
         if(this.roleRepository.count() == 0){
 
+            this.roleRepository.saveAndFlush(new Role("ROLE_USER"));
+            this.roleRepository.saveAndFlush(new Role("ROLE_INSTRUCTOR"));
+            this.roleRepository.saveAndFlush(new Role("ROLE_LEARNER"));
             this.roleRepository.saveAndFlush(new Role("ROLE_ADMIN"));
+            this.roleRepository.saveAndFlush(new Role("ROLE_ROOT"));
 
         }
 
-            this.roleRepository.saveAndFlush(new Role("ROLE_USER"));
+//            this.roleRepository.saveAndFlush(new Role("ROLE_USER"));
     }
 
 //    @Override

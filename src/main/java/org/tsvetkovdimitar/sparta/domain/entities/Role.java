@@ -7,16 +7,20 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "roles")
-public class Role extends BaseEntity implements GrantedAuthority {
+public class Role extends BaseEntity implements GrantedAuthority{
 
     private String authority;
 
+
     public Role() {
+
 
     }
 
     public Role(String authority) {
+
         this.authority = authority;
+
     }
 
     @Override

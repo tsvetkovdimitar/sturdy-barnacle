@@ -12,9 +12,9 @@
 <div class="feed container-fluid mt-5 mr-auto ml-auto">
     <div class="center jumbotron col-xl-8 col-md-8 align-bottom align-self-center bg-light">
         <h3 class="mb-3">Login</h3>
-        <form id="login-form" class="form align-self-center" name="registerForm" th:method="post" th:action="@{/users/login}">
-            <label class="float-left" for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <form id="login-form" class="form align-self-center" name="registerForm" th:action="@{/users/login}" method="post">
+            <label class="float-left" for="username">Username:</label>
+            <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
             <label class="float-left" for="password">Password:</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
             <button type="submit" class="btn btn-default btn-info mt-3">Login</button>

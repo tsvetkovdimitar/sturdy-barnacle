@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.tsvetkovdimitar.sparta.domain.models.binding.UserRegisterBindingModel;
 import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;
-import org.tsvetkovdimitar.sparta.services.UserService;
+import org.tsvetkovdimitar.sparta.service.UserService;
 
 @Controller
 @RequestMapping("/users")

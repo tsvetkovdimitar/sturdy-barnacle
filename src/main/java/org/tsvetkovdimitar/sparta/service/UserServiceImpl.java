@@ -1,4 +1,4 @@
-package org.tsvetkovdimitar.sparta.services;
+package org.tsvetkovdimitar.sparta.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,11 +7,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.tsvetkovdimitar.sparta.domain.entities.User;
-import org.tsvetkovdimitar.sparta.domain.models.service.RoleServiceModel;
 import org.tsvetkovdimitar.sparta.domain.models.service.UserServiceModel;
 import org.tsvetkovdimitar.sparta.repository.UserRepository;
 
-import javax.transaction.Transactional;
 import java.util.LinkedHashSet;
 
 @Service
@@ -54,9 +52,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        return this.userRepository.findByUsername(email).orElseThrow(()-> new UsernameNotFoundException("User with this email not found."));
+        return this.userRepository.findByUsername(username).orElseThrow(()-> new UsernameNotFoundException("Username not found."));
     }
 
 
