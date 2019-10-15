@@ -49,6 +49,29 @@ public class UserController extends BaseController{
 
     }
 
+    @GetMapping("/teacher")
+    @PreAuthorize("isAnonymous()")
+    public ModelAndView registerTeacher(){
+
+        return super.view("teacher");
+    }
+
+    @PostMapping("/teacher")
+    @PreAuthorize("isAnonymous()")
+    public ModelAndView registerTeacherConfirm(@ModelAttribute UserRegisterBindingModel userRegisterBindingModel){
+
+        if(!userRegisterBindingModel.getPassword().equals(userRegisterBindingModel.getConfirmPassword())){
+
+            return super.view("teacher");
+
+        }
+
+        this.userService.registerUser(this.modelMapper.map(userRegisterBindingModel, UserServiceModel.class));
+
+        return super.redirect("/login");
+
+    }
+
     @GetMapping("/login")
     @PreAuthorize("isAnonymous()")
     public ModelAndView login(){
